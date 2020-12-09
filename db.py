@@ -20,9 +20,9 @@ def register(user,passw,cwpassw):
     exists = cursor.fetchone()
 
     if username == "" or password == "" or confirmPassword == "":
-         outputMsg = "Enter both a username and a password"
+         outputMsg = "Enter all fields"
     elif len(password) < 8:
-        outputMsg = "Your chosen password is too short(min.8)"
+        outputMsg = "Password must be min. 8"
     elif password != confirmPassword:
         outputMsg = "Make sure passwords match"
     elif exists != None:
@@ -49,7 +49,7 @@ def login(user, passw):
     exists = cursor.fetchone()
     
     if username == "" or password == "":
-        outputMsg = "Enter both a username and a password"
+        outputMsg = "Enter a username and a password"
     elif exists == None:
         outputMsg = "Try again"
     else:

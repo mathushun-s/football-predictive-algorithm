@@ -26,7 +26,8 @@
    <string>Sign in</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="football"/>
+   <iconset theme="football">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(55, 55, 55);</string>
@@ -187,7 +188,7 @@ border-radius: 5;</string>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>8</pointsize>
+      <pointsize>7</pointsize>
       <weight>75</weight>
       <italic>true</italic>
       <bold>true</bold>
@@ -200,7 +201,7 @@ border-radius: 5;</string>
      <string notr="true">color: rgb(255, 0, 0);</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Try again</string>
     </property>
    </widget>
    <zorder>label_2</zorder>

@@ -8,15 +8,14 @@ class Ui_loginWindow(object):
         self.window = QtWidgets.QDialog()
         self.ui = registerWindow.Ui_registerWindow()
         self.ui.setupUi(self.window)
-        QtWidgets.QMainWindow().close()
         self.window.show()
 
     def openMainWindow(self):
         self.window = QtWidgets.QDialog()
         self.ui = mainWindow.Ui_mainWindow()
         self.ui.setupUi(self.window)
-        QtWidgets.QMainWindow().close()
         self.window.show()
+        loginWindow.close()
 
     def signin(self):
         result = db.login(self.Username.text(), self.Password.text())
@@ -78,6 +77,7 @@ class Ui_loginWindow(object):
         self.registerWindowBtn.setObjectName("registerWindowBtn")
 
         self.registerWindowBtn.clicked.connect(self.openRegisterWindow)
+        self.registerWindowBtn.clicked.connect(loginWindow.close)
         
         self.loginBtn = QtWidgets.QPushButton(self.centralwidget)
         self.loginBtn.setGeometry(QtCore.QRect(110, 150, 61, 21))

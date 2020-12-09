@@ -56,7 +56,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>8</pointsize>
+     <pointsize>7</pointsize>
      <weight>75</weight>
      <italic>true</italic>
      <bold>true</bold>
@@ -69,7 +69,7 @@
     <string notr="true">color: rgb(255, 0, 0);</string>
    </property>
    <property name="text">
-    <string/>
+    <string>Try again</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">

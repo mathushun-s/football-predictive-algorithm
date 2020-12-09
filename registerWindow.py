@@ -8,7 +8,6 @@ class Ui_registerWindow(object):
         self.window = QtWidgets.QMainWindow()
         self.ui = loginWindow.Ui_loginWindow()
         self.ui.setupUi(self.window)
-        QtWidgets.QDialog().hide()
         self.window.show()
 
     def signup(self):
@@ -98,6 +97,7 @@ class Ui_registerWindow(object):
         self.loginWindowBtn.setObjectName("loginWindowBtn")
 
         self.loginWindowBtn.clicked.connect(self.openWindow)
+        self.loginWindowBtn.clicked.connect(registerWindow.close)
         
         self.label_7 = QtWidgets.QLabel(registerWindow)
         self.label_7.setGeometry(QtCore.QRect(110, 100, 51, 16))
